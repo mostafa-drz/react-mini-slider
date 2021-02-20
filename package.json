@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "license": "MIT",
-  "main": "lib/src/index.js",
+  "main": "lib/index.js",
   "description": "A minimal React slider",
   "keywords": [
     "react",
