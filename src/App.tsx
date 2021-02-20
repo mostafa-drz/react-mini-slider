@@ -5,7 +5,7 @@ import Slider from "./Slider";
 function App() {
   return (
     <div className="App">
-      <Slider className="slider">
+      <Slider className="slider-container" style={{ color: "red" }}>
         <SlideA />
         <SlideB />
         <SlideC />

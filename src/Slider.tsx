@@ -1,5 +1,10 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, CSSProperties } from "react";
 
+interface ProviderProps {
+  className?: string;
+  style?: CSSProperties;
+  children: React.ReactElement[];
+}
 interface ISlider {
   handleNext: () => void;
   handlePrevious: () => void;
@@ -29,7 +34,7 @@ export const useSlider = () => {
   return sliderContext;
 };
 
-function Slider(props: any) {
+function Slider(props: ProviderProps) {
   const [step, setStep] = useState<number>(0);
   const children = React.Children.toArray(props.children);
   const current: any = children[step];
@@ -65,7 +70,10 @@ function Slider(props: any) {
         isLast: step === children.length - 1,
       }}
     >
-      {current}
+      <div className={props.className} style={props.style}>
+        {current}
+      </div>
+
       <SliderToolbar />
     </SliderContext.Provider>
   );
