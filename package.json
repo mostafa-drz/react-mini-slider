@@ -1,7 +1,19 @@
 {
-  "name": "faker-to-json",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-mini-slider",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "main": "lib/src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mostafa-drz/react-mini-slider.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -18,8 +30,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "clean": "rm -rf ./lib",
+    "prebuild": "yarn clean",
+    "build": "tsc --build tsconfig.json",
+    "copy-files": "copyfiles -u 1 src/style/base.css lib/",
+    "postbuild": "yarn run copy-files",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,6 +58,7 @@
     ]
   },
   "devDependencies": {
-    "@types/faker": "^5.1.7"
+    "@types/faker": "^5.1.7",
+    "copyfiles": "^2.4.1"
   }
 }
