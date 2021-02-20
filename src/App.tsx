@@ -9,6 +9,7 @@ function App() {
         className="slider-container"
         style={{ color: "red" }}
         toolbar={<FancyToolbar />}
+        toolbarPosition={{ left: 0, top: "50px" }}
       >
         <SlideA />
         <SlideB />
@@ -38,7 +39,7 @@ function FancyToolbar() {
     isLast,
   } = useSlider();
   return (
-    <div>
+    <>
       <button onClick={handleNext} disabled={isLast} className="btn-fancy">
         Next
       </button>
@@ -55,7 +56,7 @@ function FancyToolbar() {
       <button onClick={handleGoToLast} disabled={isLast} className="btn-fancy">
         Go To Last
       </button>
-    </div>
+    </>
   );
 }
 export default App;

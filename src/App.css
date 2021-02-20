@@ -47,4 +47,9 @@
   height: 100vh;
   border: 10px solid #000;
   background-color: #fafafa;
+  position: relative;
+}
+
+.slider-toolbar {
+  position: absolute;
 }
