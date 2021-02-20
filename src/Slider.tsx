@@ -4,6 +4,7 @@ interface ProviderProps {
   className?: string;
   style?: CSSProperties;
   children: React.ReactElement[];
+  toolbar?: React.ReactElement;
 }
 interface ISlider {
   handleNext: () => void;
@@ -74,12 +75,12 @@ function Slider(props: ProviderProps) {
         {current}
       </div>
 
-      <SliderToolbar />
+      {props.toolbar ? props.toolbar : <DefaultToolbar />}
     </SliderContext.Provider>
   );
 }
 
-function SliderToolbar() {
+function DefaultToolbar() {
   const {
     handleNext,
     handleGoToFirst,
