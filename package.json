@@ -39,7 +39,7 @@
     "clean": "rm -rf ./lib",
     "prebuild": "yarn clean",
     "build": "tsc --build tsconfig.json",
-    "copy-files": "copyfiles -u 1 src/style/base.css lib/",
+    "copy-files": "copyfiles -u 1 src/index.css lib/",
     "postbuild": "yarn run copy-files",
     "start": "react-scripts start",
     "test": "react-scripts test",
