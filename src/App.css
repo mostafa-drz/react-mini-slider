@@ -41,3 +41,10 @@
   background-color: #000;
   color: #fff;
 }
+
+.slider-container {
+  width: 100vw;
+  height: 100vh;
+  border: 10px solid #000;
+  background-color: #fafafa;
+}

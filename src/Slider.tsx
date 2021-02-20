@@ -73,9 +73,8 @@ function Slider(props: ProviderProps) {
     >
       <div className={props.className} style={props.style}>
         {current}
+        {props.toolbar ? props.toolbar : <DefaultToolbar />}
       </div>
-
-      {props.toolbar ? props.toolbar : <DefaultToolbar />}
     </SliderContext.Provider>
   );
 }
