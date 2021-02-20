@@ -4,6 +4,12 @@
   "private": false,
   "license": "MIT",
   "main": "lib/src/index.js",
+  "description": "A minimal React slider",
+  "keywords": [
+    "react",
+    "slider",
+    "react-mini-slider"
+  ],
   "directories": {
     "lib": "lib"
   },
