@@ -75,7 +75,7 @@ function Slider(props: ProviderProps) {
   }, [children.length]);
 
   const toolbarStyle = getToolbarStyle(props.toolbarPosition);
-  console.log("Toolbar Style", toolbarStyle);
+
   return (
     <SliderContext.Provider
       value={{
